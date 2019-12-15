@@ -1,0 +1,47 @@
+
+
+
+        <!-- Single Catagory -->
+       
+        <% list_product.forEach(p => { %>
+            
+            <div class="col-12 col-sm-6 col-md-12 col-xl-6">
+                    <div class="single-product-wrapper">
+                        <!-- Product Image -->
+                        <div class="product-img">
+                            <img src="<%=p.Picture%>" alt="">
+                            <!-- Hover Thumb -->
+                           
+                        </div>
+            
+                        <!-- Product Description -->
+                        <div class="product-description d-flex align-items-center justify-content-between">
+                            <!-- Product Meta Data -->
+                            <div class="product-meta-data">
+                                <div class="line"></div>
+                                <p class="product-price">$<%=p.Price%></p>
+                                <a href="/product?id=<%=p.ProductID%>">
+                                    <h6><%=p.ProductName%></h6>
+                                </a>
+                            </div>
+                            <!-- Ratings & Cart -->
+                            <div class="ratings-cart text-right">
+                                <!-- <div class="ratings">
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                    <i class="fa fa-star" aria-hidden="true"></i>
+                                </div> -->
+                                <div class="cart">
+                                    <a href="#" class="addtoCart" data-toggle="tooltip" data-placement="left" title="Add to Cart" value="<%=p.ProductID%>">
+                                        <img src="/img/core-img/cart.png" alt="">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        <%})%>
+
+ 
